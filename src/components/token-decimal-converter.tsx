@@ -37,7 +37,7 @@ export const TokenDecimalConverter: React.FC<TokenDecimalConverterProps> = ({
       const decimalFactor = BigInt(10 ** decimals);
       const result = Number(bigRawAmount) / Number(decimalFactor);
 
-      setConvertedAmount(result.toString());
+      setConvertedAmount(result.toLocaleString('en-US'));
     } catch (err) {
       // If there's a parse error or anything, show an error
       setConvertedAmount('Error converting. Check input or decimals.');
